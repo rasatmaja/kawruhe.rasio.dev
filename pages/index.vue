@@ -28,7 +28,28 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head () {
+    return {
+      title: 'Homepage Kawruhe',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico'
+        }
+      ],
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>
