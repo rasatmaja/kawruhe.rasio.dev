@@ -5,7 +5,19 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        'covid-red-primary': '#EB4559',
+        'covid-red-tint': '#FCECED',
+        'covid-gray-primary': '#666666',
+        'covid-gray-tint': '#FBFBFB',
+        'covid-blue-primary': '#468CCC',
+        'covid-blue-darken': '#151D41',
+        'covid-green-primary': '#46CC7C'
+      }
+    }
+  },
   variants: {},
   plugins: [],
   purge: {
@@ -21,6 +33,6 @@ module.exports = {
   },
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+    purgeLayersByDefault: true
+  }
 }
