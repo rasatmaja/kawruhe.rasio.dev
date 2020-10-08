@@ -1,8 +1,8 @@
 <template>
-  <div id="covid">
+  <div id="covid" class="overflow-hidden">
     <div class="main-container">
       <article id="covid- main" class="flex items-center p-10">
-        <div class="w-1/2">
+        <div v-scroll-observer:animation-left class="w-1/2">
           <div class="tittle-clip">
             COVID-19 Alert
           </div>
@@ -16,7 +16,7 @@
             <a href="#covid-symptoms">Checks Symptoms</a>
           </button>
         </div>
-        <div class="w-1/2">
+        <div v-scroll-observer:animation-right class="w-1/2">
           <img
             src="~/assets/img/covid/main-bg.svg"
             alt="disinfectant-illustrations"
@@ -24,7 +24,7 @@
         </div>
       </article>
       <article id="covid-update" class="mt-10 mb-20 p-10">
-        <div class="covid-update-container px-8 py-8 relative">
+        <div v-scroll-observer:animation-up class="covid-update-container px-8 py-8 relative">
           <div class="toggle">
             <button ref="worldwide" class="toggle-active px-10 py-1 rounded-md" @click="toggle(true)">
               Worldwide
@@ -69,13 +69,13 @@
         </div>
       </article>
       <article id="covid-about" class="my-20 p-10 flex items-center">
-        <div class="w-1/3 mr-20">
+        <div v-scroll-observer:animation-left class="w-1/3 mr-20">
           <img
             src="~/assets/img/covid/about-bg.svg"
             alt="disinfectant-illustrations"
           >
         </div>
-        <div class="w-2/3">
+        <div v-scroll-observer:animation-right class="w-2/3">
           <div class="tittle-clip">
             About COVID-19
           </div>
@@ -97,7 +97,7 @@
       </article>
       <div class="bg-covid-gray-tint">
         <article id="covid-symptoms" class="my-20 p-10 flex items-center">
-          <div class="w-1/2 mr-20">
+          <div v-scroll-observer:animation-left class="w-1/2 mr-20">
             <div class="tittle-clip">
               COVID-19 Symptoms
             </div>
@@ -179,7 +179,7 @@
               Always call before visiting your doctor or health facility.
             </h2>
           </div>
-          <div class="w-1/2">
+          <div v-scroll-observer:animation-right class="w-1/2">
             <img
               src="~/assets/img/covid/symptom-bg.svg"
               alt="disinfectant-illustrations"
@@ -189,7 +189,8 @@
       </div>
       <article
         id="covid-prevention"
-        class="my-20 p-10 flex flex-col items-center"
+        v-scroll-observer:animation-up
+        class="mt-20 mb-32 p-10 flex flex-col items-center"
       >
         <div class="tittle-clip">
           COVID-19 Prevention
@@ -292,7 +293,7 @@
         </div>
       </article>
       <div class="bg-covid-blue-darken relative h-64">
-        <article id="covid-contact" class="p-10">
+        <article id="covid-contact" v-scroll-observer:animation-up class="p-10">
           <div
             class="relative covid-contact-container flex flex-col items-center px-8 py-8 bg-white"
           >
@@ -313,6 +314,23 @@
             >
           </div>
         </article>
+        <div id="footer" class="text-white text-center p-5">
+          <div class="social-media-grid flex w-56 mx-auto justify-around mb-3">
+            <a href="https://www.instagram.com/rasatmaja/">
+              <img src="~assets/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/rasatmaja">
+              <img src="~assets/icons/twitter.svg" alt="Twitter Icon">
+            </a>
+            <a href="https://github.com/rasatmaja">
+              <img src="~assets/icons/github.svg" alt="Github Icon">
+            </a>
+            <a href="mailto:contact@rasio.dev">
+              <img src="~assets/icons/email.svg" alt="Email Icon">
+            </a>
+          </div>
+          Made with ❤️ by Rasio Atmaja. Powered by Vercel. Build with NuxtJS
+        </div>
       </div>
     </div>
   </div>
@@ -322,9 +340,9 @@
 export default {
   data () {
     return {
-      confirmed: '',
-      recovered: '',
-      deaths: ''
+      confirmed: '0',
+      recovered: '0',
+      deaths: '0'
     }
   },
   mounted () {
