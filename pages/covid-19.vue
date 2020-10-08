@@ -315,16 +315,16 @@
         </article>
         <div id="footer" class="text-white text-center p-5">
           <div class="social-media-grid flex w-56 mx-auto justify-around mb-3">
-            <a href="">
+            <a href="https://www.instagram.com/rasatmaja/">
               <img src="~assets/icons/instagram.svg" alt="Instagram">
             </a>
-            <a href="">
+            <a href="https://twitter.com/rasatmaja">
               <img src="~assets/icons/twitter.svg" alt="Twitter Icon">
             </a>
-            <a href="">
+            <a href="https://github.com/rasatmaja">
               <img src="~assets/icons/github.svg" alt="Github Icon">
             </a>
-            <a href="">
+            <a href="mailto:contact@rasio.dev">
               <img src="~assets/icons/email.svg" alt="Email Icon">
             </a>
           </div>
