@@ -189,7 +189,7 @@
       </div>
       <article
         id="covid-prevention"
-        class="my-20 p-10 flex flex-col items-center"
+        class="mt-20 mb-32 p-10 flex flex-col items-center"
       >
         <div class="tittle-clip">
           COVID-19 Prevention
@@ -313,6 +313,23 @@
             >
           </div>
         </article>
+        <div id="footer" class="text-white text-center p-5">
+          <div class="social-media-grid flex w-56 mx-auto justify-around mb-3">
+            <a href="">
+              <img src="~assets/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="">
+              <img src="~assets/icons/twitter.svg" alt="Twitter Icon">
+            </a>
+            <a href="">
+              <img src="~assets/icons/github.svg" alt="Github Icon">
+            </a>
+            <a href="">
+              <img src="~assets/icons/email.svg" alt="Email Icon">
+            </a>
+          </div>
+          Made with ❤️ by Rasio Atmaja. Powered by Vercel. Build with NuxtJS
+        </div>
       </div>
     </div>
   </div>

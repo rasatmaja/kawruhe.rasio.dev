@@ -84,7 +84,7 @@ article{
 
 #covid-contact{
     @apply absolute;
-    top:-50%;
+    top:-70%;
     right: 0;
     left: 0;
 }
@@ -105,3 +105,17 @@ article{
     transition: all 0.5s;
 }
 button:focus { outline: none; }
+
+#footer{
+    @apply max-w-screen-lg;
+    @apply mx-auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.social-media-grid{
+    filter: invert(1);
+}
