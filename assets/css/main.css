@@ -119,3 +119,26 @@ button:focus { outline: none; }
 .social-media-grid{
     filter: invert(1);
 }
+
+.left-enter{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+}
+
+.right-enter{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+}
+
+.up-enter{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+}
+
+.enter{
+    opacity: 1;
+    transform: translateX(0px);
+}
