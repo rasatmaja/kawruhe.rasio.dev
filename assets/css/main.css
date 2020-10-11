@@ -10,18 +10,34 @@ html{
     @apply bg-covid-red-tint;
     @apply text-covid-red-primary;
     @apply rounded-md;
+    @apply mb-3;
     width: max-content;
 }
 
 h1{
     font-family: 'Playfair Display', serif;
-    @apply text-5xl;
-    @apply text-black
+    @apply text-black;
+    @apply text-3xl;
+}
+
+@screen lg {
+    .tittle-clip{
+        @apply mb-0;
+    }
+    h1 {
+        @apply text-5xl;
+    }
+    h2{
+        @apply text-base;
+    }
+    .prevention-items{
+        @apply flex-row !important;
+    }
 }
 
 h2{
     @apply font-medium;
-    @apply text-base;
+    @apply text-sm;
     @apply leading-relaxed;
     @apply mt-3;
 }
@@ -71,20 +87,18 @@ article{
     border-radius: 0.5em;
     @apply p-5;
     @apply flex;
+    @apply flex-col;
     @apply items-center;
 }
 
 .prevention-container{
     @apply my-10;
     @apply grid;
-    @apply grid-cols-2;
     @apply gap-10;
     @apply max-w-screen-lg;
 }
 
 #covid-contact{
-    @apply absolute;
-    top:-70%;
     right: 0;
     left: 0;
 }
@@ -107,13 +121,7 @@ article{
 button:focus { outline: none; }
 
 #footer{
-    @apply max-w-screen-lg;
-    @apply mx-auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
+    z-index: -1;
 }
 
 .social-media-grid{
