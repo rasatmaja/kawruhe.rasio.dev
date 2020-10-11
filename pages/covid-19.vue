@@ -1,59 +1,63 @@
 <template>
   <div id="covid" class="overflow-hidden">
     <div class="main-container">
-      <article id="covid- main" class="flex items-center p-10">
-        <div v-scroll-observer:animation-left class="w-1/2">
-          <div class="tittle-clip">
-            COVID-19 Alert
-          </div>
-          <h1>Stay at Home</h1>
-          <h1>Stop it from Spreading</h1>
-          <h2>
-            Coronavirus disease 2019 (COVID-19) is an infectious disease caused
-            by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
-          </h2>
-          <button class="primary-button">
-            <a href="#covid-symptoms">Checks Symptoms</a>
-          </button>
-        </div>
-        <div v-scroll-observer:animation-right class="w-1/2">
+      <article id="covid- main" class="md:flex flex-row-reverse items-center p-5 lg:p-10">
+        <div v-scroll-observer:animation-right class="lg:w-1/2">
           <img
             src="~/assets/img/covid/main-bg.svg"
             alt="disinfectant-illustrations"
           >
         </div>
+        <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
+          <div class="mx-auto lg:mx-px tittle-clip">
+            COVID-19 Alert
+          </div>
+          <h1 class="text-center lg:text-left">
+            Stay at Home
+          </h1>
+          <h1 class="text-center lg:text-left">
+            Stop it from Spreading
+          </h1>
+          <h2 class="text-center lg:text-left">
+            Coronavirus disease 2019 (COVID-19) is an infectious disease caused
+            by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+          </h2>
+          <button class="primary-button mx-auto lg:mx-px">
+            <a href="#covid-symptoms">Checks Symptoms</a>
+          </button>
+        </div>
       </article>
-      <article id="covid-update" class="mt-10 mb-20 p-10">
-        <div v-scroll-observer:animation-up class="covid-update-container px-8 py-8 relative">
+      <article id="covid-update" class="mt-10 mb-20 p-5 md:p-10">
+        <div v-scroll-observer:animation-up class="covid-update-container p-3 lg:p-8 relative">
           <div class="toggle">
-            <button ref="worldwide" class="toggle-active px-10 py-1 rounded-md" @click="toggle(true)">
+            <button ref="worldwide" class="toggle-active px-5 lg:px-10 py-1 rounded-md" @click="toggle(true)">
               Worldwide
             </button>
-            <button ref="indonesia" class="px-10 py-1 rounded-md" @click="toggle(false)">
+            <button ref="indonesia" class="px-5 lg:px-10 py-1 rounded-md" @click="toggle(false)">
               Indonesia
             </button>
           </div>
-          <div class="grid grid-cols-3">
+          <div class="md:grid grid-cols-3">
             <div class="flex flex-col items-center p-5">
-              <p class="text-3xl font-semibold text-covid-blue-primary">
+              <p class="text-2xl sm:text-3xl font-semibold text-covid-blue-primary">
                 {{ confirmed }}
               </p>
               <p>Confirmed cases</p>
             </div>
             <div class="flex flex-col items-center p-5">
-              <p class="text-3xl font-semibold text-covid-green-primary">
+              <p class="text-2xl sm:text-3xl font-semibold text-covid-green-primary">
                 {{ recovered }}
               </p>
               <p>Recovered cases</p>
             </div>
             <div class="flex flex-col items-center p-5">
-              <p class="text-3xl font-semibold text-covid-red-primary">
+              <p class="text-2xl sm:text-3xl font-semibold text-covid-red-primary">
                 {{ deaths }}
               </p>
               <p>Deaths cases</p>
             </div>
           </div>
-          <div class="text-center text-sm">
+          <div class="text-center text-sm mt-5 md:mt-0">
             Data update on 5 October 2020 and provided by
             <span><a
               href="https://kawalcorona.com"
@@ -68,19 +72,21 @@
           >
         </div>
       </article>
-      <article id="covid-about" class="my-20 p-10 flex items-center">
-        <div v-scroll-observer:animation-left class="w-1/3 mr-20">
+      <article id="covid-about" class="my-20 p-5 lg:p-10 lg:flex items-center">
+        <div v-scroll-observer:animation-left class="w-2/3 mx-auto lg:w-1/3 mb-5 lg:mb-0 lg:mr-20">
           <img
             src="~/assets/img/covid/about-bg.svg"
             alt="disinfectant-illustrations"
           >
         </div>
-        <div v-scroll-observer:animation-right class="w-2/3">
-          <div class="tittle-clip">
+        <div v-scroll-observer:animation-right class="lg:w-2/3">
+          <div class="tittle-clip mx-auto lg:mx-px">
             About COVID-19
           </div>
-          <h1>What is SARS-CoV-2 ?</h1>
-          <h2>
+          <h1 class="text-center lg:text-left">
+            What is SARS-CoV-2 ?
+          </h1>
+          <h2 class="text-center lg:text-left">
             Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is the
             strain of coronavirus that causes coronavirus disease 2019
             (COVID-19), the respiratory illness responsible for the COVID-19
@@ -96,19 +102,21 @@
         </div>
       </article>
       <div class="bg-covid-gray-tint">
-        <article id="covid-symptoms" class="my-20 p-10 flex items-center">
-          <div v-scroll-observer:animation-left class="w-1/2 mr-20">
-            <div class="tittle-clip">
+        <article id="covid-symptoms" class="my-20 p-5 lg:p-10 flex flex-col-reverse lg:flex-row items-center">
+          <div v-scroll-observer:animation-left class="lg:w-1/2 lg:mr-20">
+            <div class="mx-auto lg:mx-px tittle-clip">
               COVID-19 Symptoms
             </div>
-            <h1>What are the symptoms ?</h1>
-            <h2>
+            <h1 class="text-center lg:text-left">
+              What are the symptoms ?
+            </h1>
+            <h2 class="text-center lg:text-left">
               COVID-19 affects different people in different ways. On average it
               takes 5–6 days from when someone is infected with the virus for
               symptoms to show, however it can take up to 14 days.
             </h2>
             <div class="symptoms-caontainer my-5 grid grid-cols-2">
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1  text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -117,7 +125,7 @@
                 >
                 Fever
               </div>
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -125,7 +133,7 @@
                   class="mr-1"
                 >Dry cough
               </div>
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -133,7 +141,7 @@
                   class="mr-1"
                 >Sore throat
               </div>
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -141,7 +149,7 @@
                   class="mr-1"
                 >Headache
               </div>
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -149,7 +157,7 @@
                   class="mr-1"
                 >Tiredness
               </div>
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -157,15 +165,15 @@
                   class="mr-1"
                 >Loss of taste or smell
               </div>
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
-                >Chest Pain or presure
+                >Chest Pain
               </div>
-              <div class="flex items-center my-1">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -174,12 +182,12 @@
                 >Difficulty breathing
               </div>
             </div>
-            <h2>
+            <h2 class="text-center lg:text-left">
               Seek immediate medical attention if you have serious symptoms.
               Always call before visiting your doctor or health facility.
             </h2>
           </div>
-          <div v-scroll-observer:animation-right class="w-1/2">
+          <div v-scroll-observer:animation-right class="w-2/3 lg:w-1/2">
             <img
               src="~/assets/img/covid/symptom-bg.svg"
               alt="disinfectant-illustrations"
@@ -190,19 +198,21 @@
       <article
         id="covid-prevention"
         v-scroll-observer:animation-up
-        class="mt-20 mb-32 p-10 flex flex-col items-center"
+        class="mt-20 p-5 lg:p-10 flex flex-col items-center"
       >
         <div class="tittle-clip">
           COVID-19 Prevention
         </div>
-        <h1>How can we protect ourself from COVID-19</h1>
+        <h1 class="text-center">
+          How can we protect ourself from COVID-19
+        </h1>
         <h2 class="text-center">
           To protect yourself and others against COVID-19, clean your hands
           frequently and thoroughly. Use alcohol-based hand sanitizer or wash
           your hands with soap and water. If you use an alcohol-based hand
           sanitizer, make sure you use and store it carefully.
         </h2>
-        <div class="prevention-container">
+        <div class="prevention-container grid-cols-1 lg:grid-cols-2">
           <div class="prevention-items">
             <img
               width="60"
@@ -210,8 +220,8 @@
               alt="wash illustrations"
               class="mr-2"
             >
-            <div>
-              <p class="font-semibold text-lg">
+            <div class="text-sm lg:text-base text-center lg:text-left">
+              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
                 Wash your hands
               </p>
               Wash your hand using soap and running water
@@ -224,8 +234,8 @@
               alt="wash illustrations"
               class="mr-2"
             >
-            <div>
-              <p class="font-semibold text-lg">
+            <div class="text-sm lg:text-base text-center lg:text-left">
+              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
                 Wear a mask
               </p>
               Always use mask if you not in your home
@@ -238,8 +248,8 @@
               alt="social distancing illustrations"
               class="mr-2"
             >
-            <div>
-              <p class="font-semibold text-lg">
+            <div class="text-sm lg:text-base text-center lg:text-left">
+              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
                 Social distancing
               </p>
               Maintain at least 1 metre (3 feet) distance between yourself and
@@ -253,8 +263,8 @@
               alt="travel illustrations"
               class="mr-2"
             >
-            <div>
-              <p class="font-semibold text-lg">
+            <div class="text-sm lg:text-base text-center lg:text-left">
+              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
                 Avoid travel
               </p>
               Avoid going to Travel. You are more likely to come into close
@@ -268,8 +278,8 @@
               alt="wash illustrations"
               class="mr-2"
             >
-            <div>
-              <p class="font-semibold text-lg">
+            <div class="text-sm lg:text-base text-center lg:text-left">
+              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
                 Quarantine
               </p>
               Quarantine helps prevent spread of disease that can occur before a
@@ -283,8 +293,8 @@
               alt="wash illustrations"
               class="mr-2"
             >
-            <div>
-              <p class="font-semibold text-lg">
+            <div class="text-sm lg:text-base text-center lg:text-left">
+              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
                 Seek medical care
               </p>
               Seek immediate medical attention if you have serious symptoms.
@@ -292,29 +302,31 @@
           </div>
         </div>
       </article>
-      <div class="bg-covid-blue-darken relative h-64">
-        <article id="covid-contact" v-scroll-observer:animation-up class="p-10">
-          <div
-            class="relative covid-contact-container flex flex-col items-center px-8 py-8 bg-white"
+      <article id="covid-contact" v-scroll-observer:animation-up class="p-5 lg:p-10 -mb-40 relative z-10">
+        <div
+          class="relative covid-contact-container flex flex-col items-center px-8 py-8 bg-white"
+        >
+          <h1 class="text-center">
+            Need help about COVID-19?
+          </h1>
+          <h2 class="text-center max-w-xl">
+            If you need information or seek a medical help on Indonesia area,
+            contact this Indonesian COVID-19 Hotline on 119. -- Every live is
+            matter --
+          </h2>
+          <button class="primary-button">
+            <a href="">Call 119</a>
+          </button>
+          <img
+            width="80"
+            src="~/assets/img/covid/virus.svg"
+            alt="virus-illustrations"
+            class="absolute bottom-0 left-0"
           >
-            <h1>Need help about COVID-19?</h1>
-            <h2 class="text-center max-w-xl">
-              If you need information or seek a medical help on Indonesia area,
-              contact this Indonesian COVID-19 Hotline on 119. -- Every live is
-              matter --
-            </h2>
-            <button class="primary-button">
-              <a href="">Call 119</a>
-            </button>
-            <img
-              width="80"
-              src="~/assets/img/covid/virus.svg"
-              alt="virus-illustrations"
-              class="absolute bottom-0 left-0"
-            >
-          </div>
-        </article>
-        <div id="footer" class="text-white text-center p-5">
+        </div>
+      </article>
+      <div id="footer" class="bg-covid-blue-darken relative h-64 flex flex-col justify-end">
+        <div class="text-white text-center p-5 text-xs lg:text-sm">
           <div class="social-media-grid flex w-56 mx-auto justify-around mb-3">
             <a href="https://www.instagram.com/rasatmaja/">
               <img src="~assets/icons/instagram.svg" alt="Instagram">
