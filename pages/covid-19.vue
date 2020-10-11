@@ -8,13 +8,17 @@
             alt="disinfectant-illustrations"
           >
         </div>
-        <div v-scroll-observer:animation-left class="lg:w-1/2">
-          <div class="tittle-clip">
+        <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
+          <div class="mx-auto lg:mx-px tittle-clip">
             COVID-19 Alert
           </div>
-          <h1>Stay at Home</h1>
-          <h1>Stop it from Spreading</h1>
-          <h2>
+          <h1 class="text-center lg:text-left">
+            Stay at Home
+          </h1>
+          <h1 class="text-center lg:text-left">
+            Stop it from Spreading
+          </h1>
+          <h2 class="text-center lg:text-left">
             Coronavirus disease 2019 (COVID-19) is an infectious disease caused
             by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
           </h2>
