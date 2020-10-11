@@ -22,7 +22,7 @@
             Coronavirus disease 2019 (COVID-19) is an infectious disease caused
             by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
           </h2>
-          <button class="primary-button">
+          <button class="primary-button mx-auto lg:mx-px">
             <a href="#covid-symptoms">Checks Symptoms</a>
           </button>
         </div>
