@@ -121,10 +121,6 @@ article{
 }
 button:focus { outline: none; }
 
-#footer{
-    z-index: -1;
-}
-
 .social-media-grid{
     filter: invert(1);
 }

@@ -302,7 +302,7 @@
           </div>
         </div>
       </article>
-      <article id="covid-contact" v-scroll-observer:animation-up class="p-5 lg:p-10 -mb-40">
+      <article id="covid-contact" v-scroll-observer:animation-up class="p-5 lg:p-10 -mb-40 relative z-10">
         <div
           class="relative covid-contact-container flex flex-col items-center px-8 py-8 bg-white"
         >
