@@ -348,6 +348,10 @@
   </div>
 </template>
 
+<style>
+  @import '~assets/css/covid/styles.css';
+</style>
+
 <script>
 export default {
   data () {

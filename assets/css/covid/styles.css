@@ -1,0 +1,121 @@
+.tittle-clip{
+    @apply text-sm;
+    @apply px-3;
+    @apply py-1;
+    @apply bg-covid-red-tint;
+    @apply text-covid-red-primary;
+    @apply rounded-md;
+    @apply mb-3;
+    width: max-content;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    @apply text-black;
+    @apply text-3xl;
+}
+
+@screen lg {
+    .tittle-clip{
+        @apply mb-0;
+    }
+    h1 {
+        @apply text-5xl;
+    }
+    h2{
+        @apply text-base;
+    }
+    .prevention-items{
+        @apply flex-row !important;
+    }
+}
+
+h2{
+    @apply font-medium;
+    @apply text-sm;
+    @apply leading-relaxed;
+    @apply mt-3;
+}
+
+.toggle{
+    width: max-content;
+    @apply text-center;
+    @apply bg-covid-gray-tint;
+    @apply mx-auto;
+    @apply flex;
+    @apply justify-around;
+    @apply p-1;
+    @apply rounded-lg;
+}
+
+.primary-button{
+    @apply bg-covid-red-primary; 
+    @apply text-white;
+    @apply py-4;
+    @apply px-8;
+    @apply rounded-full;
+    @apply font-medium;
+    @apply mt-5;
+
+    outline: none;
+    filter: drop-shadow(0px 8px 16px rgba(235, 69, 89, 0.25));
+    width: max-content;
+}
+
+.covid-update-container{
+    @apply max-w-screen-lg;
+    @apply mx-auto;
+    box-shadow: 8px 8px 16px 11px #FAFAFA;
+    border-radius: 16px;
+    border: 1px solid #FAFAFA;
+    overflow: hidden;
+}
+
+article{
+    @apply mx-auto;
+    @apply max-w-screen-xl;
+}
+
+.prevention-items{
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    box-shadow: 0px 0.5em 1em #F5F5F5;
+    border-radius: 0.5em;
+    @apply p-5;
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+}
+
+.prevention-container{
+    @apply my-10;
+    @apply grid;
+    @apply gap-10;
+    @apply max-w-screen-lg;
+}
+
+#covid-contact{
+    right: 0;
+    left: 0;
+}
+
+.covid-contact-container{
+    @apply max-w-screen-lg;
+    @apply mx-auto;
+    border-radius: 16px;
+    border: 1px solid #EBEBEB;
+    overflow: hidden;
+}
+
+.toggle-active{
+    @apply bg-white;
+}
+
+.toggle > button {
+    transition: all 0.5s;
+}
+button:focus { outline: none; }
+
+.social-media-grid{
+    filter: invert(1);
+}
