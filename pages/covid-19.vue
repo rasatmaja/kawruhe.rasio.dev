@@ -1,7 +1,10 @@
 <template>
   <div id="covid" class="overflow-hidden">
     <div class="main-container">
-      <article id="covid- main" class="md:flex flex-row-reverse items-center p-5 lg:p-10">
+      <article
+        id="covid- main"
+        class="md:flex flex-row-reverse items-center p-5 lg:p-10"
+      >
         <div v-scroll-observer:animation-right class="lg:w-1/2">
           <img
             src="~/assets/img/covid/main-bg.svg"
@@ -28,37 +31,54 @@
         </div>
       </article>
       <article id="covid-update" class="mt-10 mb-20 p-5 md:p-10">
-        <div v-scroll-observer:animation-up class="covid-update-container p-3 lg:p-8 relative">
+        <div
+          v-scroll-observer:animation-up
+          class="covid-update-container p-3 lg:p-8 relative"
+        >
           <div class="toggle">
-            <button ref="worldwide" class="toggle-active px-5 lg:px-10 py-1 rounded-md" @click="toggle(true)">
+            <button
+              ref="worldwide"
+              class="toggle-active px-5 lg:px-10 py-1 rounded-md"
+              @click="toggle(true)"
+            >
               Worldwide
             </button>
-            <button ref="indonesia" class="px-5 lg:px-10 py-1 rounded-md" @click="toggle(false)">
+            <button
+              ref="indonesia"
+              class="px-5 lg:px-10 py-1 rounded-md"
+              @click="toggle(false)"
+            >
               Indonesia
             </button>
           </div>
           <div class="md:grid grid-cols-3">
             <div class="flex flex-col items-center p-5">
-              <p class="text-2xl sm:text-3xl font-semibold text-covid-blue-primary">
+              <p
+                class="text-2xl sm:text-3xl font-semibold text-covid-blue-primary"
+              >
                 {{ confirmed }}
               </p>
               <p>Confirmed cases</p>
             </div>
             <div class="flex flex-col items-center p-5">
-              <p class="text-2xl sm:text-3xl font-semibold text-covid-green-primary">
+              <p
+                class="text-2xl sm:text-3xl font-semibold text-covid-green-primary"
+              >
                 {{ recovered }}
               </p>
               <p>Recovered cases</p>
             </div>
             <div class="flex flex-col items-center p-5">
-              <p class="text-2xl sm:text-3xl font-semibold text-covid-red-primary">
+              <p
+                class="text-2xl sm:text-3xl font-semibold text-covid-red-primary"
+              >
                 {{ deaths }}
               </p>
               <p>Deaths cases</p>
             </div>
           </div>
           <div class="text-center text-sm mt-5 md:mt-0">
-            Data update on 5 October 2020 and provided by
+            Data update on {{ today }} and provided by
             <span><a
               href="https://kawalcorona.com"
               class="text-covid-red-primary"
@@ -73,7 +93,10 @@
         </div>
       </article>
       <article id="covid-about" class="my-20 p-5 lg:p-10 lg:flex items-center">
-        <div v-scroll-observer:animation-left class="w-2/3 mx-auto lg:w-1/3 mb-5 lg:mb-0 lg:mr-20">
+        <div
+          v-scroll-observer:animation-left
+          class="w-2/3 mx-auto lg:w-1/3 mb-5 lg:mb-0 lg:mr-20"
+        >
           <img
             src="~/assets/img/covid/about-bg.svg"
             alt="disinfectant-illustrations"
@@ -102,7 +125,10 @@
         </div>
       </article>
       <div class="bg-covid-gray-tint">
-        <article id="covid-symptoms" class="my-20 p-5 lg:p-10 flex flex-col-reverse lg:flex-row items-center">
+        <article
+          id="covid-symptoms"
+          class="my-20 p-5 lg:p-10 flex flex-col-reverse lg:flex-row items-center"
+        >
           <div v-scroll-observer:animation-left class="lg:w-1/2 lg:mr-20">
             <div class="mx-auto lg:mx-px tittle-clip">
               COVID-19 Symptoms
@@ -116,7 +142,7 @@
               symptoms to show, however it can take up to 14 days.
             </h2>
             <div class="symptoms-caontainer my-5 grid grid-cols-2">
-              <div class="flex items-center my-1  text-sm lg:text-base">
+              <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
                   src="~assets/icons/check.svg"
@@ -221,7 +247,9 @@
               class="mr-2"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
-              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
+              <p
+                class="font-semibold text-base lg:text-lg text-center lg:text-left"
+              >
                 Wash your hands
               </p>
               Wash your hand using soap and running water
@@ -235,7 +263,9 @@
               class="mr-2"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
-              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
+              <p
+                class="font-semibold text-base lg:text-lg text-center lg:text-left"
+              >
                 Wear a mask
               </p>
               Always use mask if you not in your home
@@ -249,7 +279,9 @@
               class="mr-2"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
-              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
+              <p
+                class="font-semibold text-base lg:text-lg text-center lg:text-left"
+              >
                 Social distancing
               </p>
               Maintain at least 1 metre (3 feet) distance between yourself and
@@ -264,7 +296,9 @@
               class="mr-2"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
-              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
+              <p
+                class="font-semibold text-base lg:text-lg text-center lg:text-left"
+              >
                 Avoid travel
               </p>
               Avoid going to Travel. You are more likely to come into close
@@ -279,7 +313,9 @@
               class="mr-2"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
-              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
+              <p
+                class="font-semibold text-base lg:text-lg text-center lg:text-left"
+              >
                 Quarantine
               </p>
               Quarantine helps prevent spread of disease that can occur before a
@@ -294,7 +330,9 @@
               class="mr-2"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
-              <p class="font-semibold text-base lg:text-lg text-center lg:text-left">
+              <p
+                class="font-semibold text-base lg:text-lg text-center lg:text-left"
+              >
                 Seek medical care
               </p>
               Seek immediate medical attention if you have serious symptoms.
@@ -302,7 +340,11 @@
           </div>
         </div>
       </article>
-      <article id="covid-contact" v-scroll-observer:animation-up class="p-5 lg:p-10 -mb-40 relative z-10">
+      <article
+        id="covid-contact"
+        v-scroll-observer:animation-up
+        class="p-5 lg:p-10 -mb-40 relative z-10"
+      >
         <div
           class="relative covid-contact-container flex flex-col items-center px-8 py-8 bg-white"
         >
@@ -325,7 +367,10 @@
           >
         </div>
       </article>
-      <div id="footer" class="bg-covid-blue-darken relative h-64 flex flex-col justify-end">
+      <div
+        id="footer"
+        class="bg-covid-blue-darken relative h-64 flex flex-col justify-end"
+      >
         <div class="text-white text-center p-5 text-xs lg:text-sm">
           <div class="social-media-grid flex w-56 mx-auto justify-around mb-3">
             <a href="https://www.instagram.com/rasatmaja/">
@@ -349,13 +394,24 @@
 </template>
 
 <style>
-  @import '~assets/css/covid/styles.css';
+@import "~assets/css/covid/styles.css";
 </style>
 
 <script>
 export default {
   data () {
     return {
+
+      today: new Date().toLocaleDateString(),
+
+      worldwide_confirmed: '0',
+      worldwide_recovered: '0',
+      worldwide_deaths: '0',
+
+      indonesia_confirmed: '0',
+      indonesia_recovered: '0',
+      indonesia_deaths: '0',
+
       confirmed: '0',
       recovered: '0',
       deaths: '0'
@@ -365,33 +421,39 @@ export default {
     this.getCovidData()
   },
   methods: {
-    async getCovidData (isWorldwide = true) {
-      if (isWorldwide) {
-        const confrimed = await this.$store.dispatch('getConfirmedCase')
-        this.confirmed = confrimed.data.value
+    async getCovidData () {
+      const confrimed = await this.$store.dispatch('getConfirmedCase')
+      this.worldwide_confirmed = confrimed.data.value
 
-        const recovered = await this.$store.dispatch('getRecoveredCase')
-        this.recovered = recovered.data.value
+      const recovered = await this.$store.dispatch('getRecoveredCase')
+      this.worldwide_recovered = recovered.data.value
 
-        const deaths = await this.$store.dispatch('getDeathsCase')
-        this.deaths = deaths.data.value
-      } else {
-        const res = await this.$store.dispatch('getIndonesiaCase')
-        this.confirmed = res.data[0].positif
-        this.recovered = res.data[0].sembuh
-        this.deaths = res.data[0].meninggal
-      }
+      const deaths = await this.$store.dispatch('getDeathsCase')
+      this.worldwide_deaths = deaths.data.value
+
+      const res = await this.$store.dispatch('getIndonesiaCase')
+      this.indonesia_confirmed = res.data[0].positif
+      this.indonesia_recovered = res.data[0].sembuh
+      this.indonesia_deaths = res.data[0].meninggal
+
+      this.toggle()
     },
     toggle (isWorldwide = true) {
       const defaultClass = 'px-10 py-1 rounded-md '
       if (isWorldwide) {
         this.$refs.worldwide.className = defaultClass + 'toggle-active'
         this.$refs.indonesia.className = defaultClass
-        this.getCovidData(true)
+
+        this.confirmed = this.worldwide_confirmed
+        this.recovered = this.worldwide_recovered
+        this.deaths = this.worldwide_deaths
       } else {
         this.$refs.indonesia.className = defaultClass + 'toggle-active'
         this.$refs.worldwide.className = defaultClass
-        this.getCovidData(false)
+
+        this.confirmed = this.indonesia_confirmed
+        this.recovered = this.indonesia_recovered
+        this.deaths = this.indonesia_deaths
       }
     }
   },
