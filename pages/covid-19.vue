@@ -56,7 +56,7 @@
               <p
                 class="text-2xl sm:text-3xl font-semibold text-covid-blue-primary"
               >
-                {{ confirmed }}
+                {{ cases.confirmed }}
               </p>
               <p>Confirmed cases</p>
             </div>
@@ -64,7 +64,7 @@
               <p
                 class="text-2xl sm:text-3xl font-semibold text-covid-green-primary"
               >
-                {{ recovered }}
+                {{ cases.recovered }}
               </p>
               <p>Recovered cases</p>
             </div>
@@ -72,7 +72,7 @@
               <p
                 class="text-2xl sm:text-3xl font-semibold text-covid-red-primary"
               >
-                {{ deaths }}
+                {{ cases.deaths }}
               </p>
               <p>Deaths cases</p>
             </div>
@@ -401,59 +401,29 @@
 export default {
   data () {
     return {
-
       today: new Date().toLocaleDateString(),
-
-      worldwide_confirmed: '0',
-      worldwide_recovered: '0',
-      worldwide_deaths: '0',
-
-      indonesia_confirmed: '0',
-      indonesia_recovered: '0',
-      indonesia_deaths: '0',
-
-      confirmed: '0',
-      recovered: '0',
-      deaths: '0'
+      cases: {}
     }
   },
   mounted () {
-    this.getCovidData()
+    this.$store.dispatch('covid/fetchWorlwideCase')
+    this.$store.dispatch('covid/fetchIndonesiaCase')
+
+    this.toggle()
   },
   methods: {
-    async getCovidData () {
-      const confrimed = await this.$store.dispatch('getConfirmedCase')
-      this.worldwide_confirmed = confrimed.data.value
-
-      const recovered = await this.$store.dispatch('getRecoveredCase')
-      this.worldwide_recovered = recovered.data.value
-
-      const deaths = await this.$store.dispatch('getDeathsCase')
-      this.worldwide_deaths = deaths.data.value
-
-      const res = await this.$store.dispatch('getIndonesiaCase')
-      this.indonesia_confirmed = res.data[0].positif
-      this.indonesia_recovered = res.data[0].sembuh
-      this.indonesia_deaths = res.data[0].meninggal
-
-      this.toggle()
-    },
     toggle (isWorldwide = true) {
       const defaultClass = 'px-10 py-1 rounded-md '
       if (isWorldwide) {
         this.$refs.worldwide.className = defaultClass + 'toggle-active'
         this.$refs.indonesia.className = defaultClass
 
-        this.confirmed = this.worldwide_confirmed
-        this.recovered = this.worldwide_recovered
-        this.deaths = this.worldwide_deaths
+        this.cases = this.$store.getters['covid/getWorldwideData']
       } else {
         this.$refs.indonesia.className = defaultClass + 'toggle-active'
         this.$refs.worldwide.className = defaultClass
 
-        this.confirmed = this.indonesia_confirmed
-        this.recovered = this.indonesia_recovered
-        this.deaths = this.indonesia_deaths
+        this.cases = this.$store.getters['covid/getIndonesiaData']
       }
     }
   },
