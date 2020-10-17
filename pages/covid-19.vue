@@ -1,8 +1,18 @@
 <template>
   <div id="covid" class="overflow-hidden">
+    <header class="shadow-md fixed w-full z-50 blur-bg">
+      <nav class="flex mx-auto max-w-screen-xl px-10 py-5 justify-end">
+        <div id="menu-container" class="grid grid-flow-col gap-10">
+          <a href="#covid-update" class="hover:text-covid-red-primary">Update Cases</a>
+          <a href="#covid-about" class="hover:text-covid-red-primary">Covid-19</a>
+          <a href="#covid-symptoms" class="hover:text-covid-red-primary">Symptoms</a>
+          <a href="#covid-prevention" class="hover:text-covid-red-primary">Preventions</a>
+        </div>
+      </nav>
+    </header>
     <div class="main-container">
       <article
-        id="covid- main"
+        id="covid-main"
         class="md:flex flex-row-reverse items-center p-5 lg:p-10"
       >
         <div v-scroll-observer:animation-right class="lg:w-1/2">
