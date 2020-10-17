@@ -15,21 +15,6 @@ h1{
     @apply text-3xl;
 }
 
-@screen lg {
-    .tittle-clip{
-        @apply mb-0;
-    }
-    h1 {
-        @apply text-5xl;
-    }
-    h2{
-        @apply text-base;
-    }
-    .prevention-items{
-        @apply flex-row !important;
-    }
-}
-
 h2{
     @apply font-medium;
     @apply text-sm;
@@ -118,4 +103,19 @@ button:focus { outline: none; }
 
 .social-media-grid{
     filter: invert(1);
+}
+
+@screen lg {
+    .tittle-clip{
+        @apply mb-0;
+    }
+    h1 {
+        @apply text-5xl;
+    }
+    h2{
+        @apply text-base;
+    }
+    .prevention-items{
+        @apply flex-row !important;
+    }
 }
