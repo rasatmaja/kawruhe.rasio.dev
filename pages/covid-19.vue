@@ -1,12 +1,22 @@
 <template>
   <div id="covid" class="overflow-hidden">
     <header class="shadow-md fixed w-full z-50 blur-bg">
-      <nav class="flex mx-auto max-w-screen-xl px-10 py-5 justify-end">
-        <div id="menu-container" class="grid grid-flow-col gap-10">
-          <a href="#covid-update" class="hover:text-covid-red-primary">Update Cases</a>
-          <a href="#covid-about" class="hover:text-covid-red-primary">Covid-19</a>
-          <a href="#covid-symptoms" class="hover:text-covid-red-primary">Symptoms</a>
-          <a href="#covid-prevention" class="hover:text-covid-red-primary">Preventions</a>
+      <nav class="flex items-center justify-between flex-wrap mx-auto max-w-screen-xl px-5 lg:px-10 py-2 md:py-5">
+        <div id="logo-container" class="font-black">
+          COVID-19
+        </div>
+        <div class="block lg:hidden">
+          <button class="flex items-center px-3 py-2 border rounded border-gray-400" @click="toggleMenu()">
+            <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+          </button>
+        </div>
+        <div :class="isMenuCollapse ? 'block' : 'hidden'" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
+          <div class="text-sm lg:text-base lg:flex-grow max-w-lg lg:justify-end lg:text-right">
+            <a href="#covid-update" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Update Cases</a>
+            <a href="#covid-about" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Covid-19</a>
+            <a href="#covid-symptoms" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Symptoms</a>
+            <a href="#covid-prevention" class="block mt-4 lg:inline-block lg:mt-0 hover:text-covid-red-primary">Preventions</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -421,7 +431,9 @@ export default {
   data () {
     return {
       today: new Date().toLocaleDateString(),
-      cases: {}
+      cases: {},
+
+      isMenuCollapse: false
     }
   },
   computed: {
@@ -449,6 +461,9 @@ export default {
 
         this.cases = this.$store.getters['covid/getIndonesiaData']
       }
+    },
+    toggleMenu () {
+      this.isMenuCollapse = !this.isMenuCollapse
     }
   },
   head () {
