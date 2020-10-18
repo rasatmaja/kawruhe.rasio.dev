@@ -1,8 +1,9 @@
 <template>
   <div id="covid" class="overflow-hidden">
     <header class="shadow-md fixed w-full z-50 blur-bg">
-      <nav class="flex items-center justify-between flex-wrap mx-auto max-w-screen-xl px-5 lg:px-10 py-2 md:py-5">
-        <div id="logo-container" class="font-black">
+      <nav class="flex items-center justify-between flex-wrap mx-auto max-w-screen-xl px-5 lg:px-10 py-3">
+        <div id="logo-container" class="font-black text-covid-red-primary flex items-center">
+          <img src="~assets/img/covid/virus-color.svg" alt="Covid-19" width="32" class="mr-3">
           COVID-19
         </div>
         <div class="block lg:hidden">
@@ -11,11 +12,12 @@
           </button>
         </div>
         <div :class="isMenuCollapse ? 'block' : 'hidden'" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
-          <div class="text-sm lg:text-base lg:flex-grow max-w-lg lg:justify-end lg:text-right">
-            <a href="#covid-update" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Update Cases</a>
+          <div class="text-sm lg:text-base lg:flex-grow max-w-xl lg:justify-end lg:text-right">
+            <a href="#covid-update" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Cases</a>
             <a href="#covid-about" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Covid-19</a>
             <a href="#covid-symptoms" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Symptoms</a>
-            <a href="#covid-prevention" class="block mt-4 lg:inline-block lg:mt-0 hover:text-covid-red-primary">Preventions</a>
+            <a href="#covid-prevention" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Preventions</a>
+            <a href="/" class="block mt-4 lg:inline-block lg:mt-0 hover:text-covid-red-primary">Home</a>
           </div>
         </div>
       </nav>
@@ -23,7 +25,7 @@
     <div class="main-container">
       <article
         id="covid-main"
-        class="p-5 lg:p-10 mt-12 flex flex-col justify-center"
+        class="p-5 lg:p-10 mt-16 flex flex-col justify-center"
       >
         <div class="lg:flex items-center">
           <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
@@ -382,8 +384,10 @@
           </h1>
           <h2 class="text-center max-w-xl">
             If you need information or seek a medical help on Indonesia area,
-            contact this Indonesian COVID-19 Hotline on 119. -- Every live is
-            matter --
+            contact this Indonesian COVID-19 Hotline on 119.
+          </h2>
+          <h2 class="text-center max-w-xl font-bold">
+            Every live is matter
           </h2>
           <button class="primary-button mt-5">
             <a href="tel:119">Call 119</a>
