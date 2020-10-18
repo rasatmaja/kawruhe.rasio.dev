@@ -13,12 +13,13 @@
     <div class="main-container">
       <article
         id="covid-main"
-        class="md:flex flex-row-reverse items-center p-5 lg:p-10"
+        class="lg:flex flex-row-reverse items-center p-5 lg:p-10"
       >
         <div v-scroll-observer:animation-right class="lg:w-1/2">
           <img
             src="~/assets/img/covid/main-bg.svg"
             alt="disinfectant-illustrations"
+            class="mx-auto"
           >
         </div>
         <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
@@ -40,12 +41,15 @@
           </button>
         </div>
       </article>
-      <article id="covid-update" class="mt-10 mb-20 p-5 md:p-10">
+      <article id="covid-update" class="mb-20 p-5 md:p-10">
         <div
           v-scroll-observer:animation-up
           class="covid-update-container p-3 lg:p-8 relative"
         >
-          <div class="toggle">
+          <div class="mx-auto tittle-clip">
+            COVID-19 Case Update
+          </div>
+          <div class="toggle mt-5">
             <button
               ref="worldwide"
               class="toggle-active px-5 lg:px-10 py-1 rounded-md"

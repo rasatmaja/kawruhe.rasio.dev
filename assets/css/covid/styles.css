@@ -22,6 +22,10 @@ h2{
     @apply mt-3;
 }
 
+#covid-main{
+    min-height: calc(100vh * 0.7);
+}
+
 .toggle{
     width: max-content;
     @apply text-center;
