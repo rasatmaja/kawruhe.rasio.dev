@@ -48,10 +48,7 @@
           v-scroll-observer:animation-up
           class="covid-update-container p-3 lg:p-8 relative"
         >
-          <div class="mx-auto tittle-clip">
-            COVID-19 Case Update
-          </div>
-          <div class="toggle mt-5">
+          <div class="toggle">
             <button
               ref="worldwide"
               class="toggle-active px-5 lg:px-10 py-1 rounded-md text-sm md:text-base"
@@ -135,10 +132,10 @@
             Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is the
             strain of coronavirus that causes coronavirus disease 2019
             (COVID-19), the respiratory illness responsible for the COVID-19
-            pandemic. Colloquially known as simply the coronavirus, it was
-            previously referred to by its provisional name, 2019 novel
-            coronavirus (2019-nCoV), and has also been called human coronavirus
-            2019 (HCoV-19 or hCoV-19). Taxonomically, SARS-CoV-2 is a strain of
+            pandemic.
+          </h2>
+          <h2 class="text-center lg:text-left">
+            Taxonomically, SARS-CoV-2 is a strain of
             severe acute respiratory syndrome-related coronavirus (SARSr-CoV).
             The virus shows divttle genetic diversity, indicating that the
             spillover event introducing SARS-CoV-2 to humans is divkely to have
@@ -254,7 +251,7 @@
         <h1 class="text-center">
           How can we protect ourself from COVID-19
         </h1>
-        <h2 class="text-center">
+        <h2 class="text-center max-w-4xl">
           To protect yourself and others against COVID-19, clean your hands
           frequently and thoroughly. Use alcohol-based hand sanitizer or wash
           your hands with soap and water. If you use an alcohol-based hand
