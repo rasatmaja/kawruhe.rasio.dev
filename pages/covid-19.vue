@@ -13,33 +13,35 @@
     <div class="main-container">
       <article
         id="covid-main"
-        class="lg:flex flex-row-reverse items-center p-5 lg:p-10"
+        class="p-5 lg:p-10 mt-12 flex flex-col justify-center"
       >
-        <div v-scroll-observer:animation-right class="lg:w-1/2">
-          <img
-            src="~/assets/img/covid/main-bg.svg"
-            alt="disinfectant-illustrations"
-            class="mx-auto"
-          >
-        </div>
-        <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
-          <div class="mx-auto lg:mx-px tittle-clip">
-            COVID-19 Alert
+        <div class="lg:flex items-center">
+          <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
+            <div class="mx-auto lg:mx-px tittle-clip">
+              COVID-19 Alert
+            </div>
+            <h1 class="text-center lg:text-left">
+              Stay at Home
+            </h1>
+            <h1 class="text-center lg:text-left">
+              Stop it from Spreading
+            </h1>
+            <h2 class="text-center lg:text-left mb-5 max-w-md">
+              Coronavirus disease 2019 (COVID-19) is an infectious disease caused
+              by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+            </h2>
           </div>
-          <h1 class="text-center lg:text-left">
-            Stay at Home
-          </h1>
-          <h1 class="text-center lg:text-left">
-            Stop it from Spreading
-          </h1>
-          <h2 class="text-center lg:text-left">
-            Coronavirus disease 2019 (COVID-19) is an infectious disease caused
-            by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
-          </h2>
-          <button class="primary-button mx-auto lg:mx-px">
-            <a href="#covid-symptoms">Checks Symptoms</a>
-          </button>
+          <div v-scroll-observer:animation-right class="lg:w-1/2">
+            <img
+              src="~/assets/img/covid/main-bg.svg"
+              alt="disinfectant-illustrations"
+              class="mx-auto lg:-mb-16"
+            >
+          </div>
         </div>
+        <button v-scroll-observer:animation-left class="primary-button mx-auto lg:mx-px ">
+          <a href="#covid-symptoms">Checks Symptoms</a>
+        </button>
       </article>
       <article id="covid-update" class="mb-20 p-5 md:p-10">
         <div
@@ -52,14 +54,14 @@
           <div class="toggle mt-5">
             <button
               ref="worldwide"
-              class="toggle-active px-5 lg:px-10 py-1 rounded-md"
+              class="toggle-active px-5 lg:px-10 py-1 rounded-md text-sm md:text-base"
               @click="toggle(true)"
             >
               Worldwide
             </button>
             <button
               ref="indonesia"
-              class="px-5 lg:px-10 py-1 rounded-md"
+              class="px-5 lg:px-10 py-1 rounded-md text-sm md:text-base"
               @click="toggle(false)"
             >
               Indonesia
@@ -438,7 +440,7 @@ export default {
   },
   methods: {
     toggle (isWorldwide = true) {
-      const defaultClass = 'px-10 py-1 rounded-md '
+      const defaultClass = 'px-5 lg:px-10 py-1 rounded-md text-sm md:text-base '
       if (isWorldwide) {
         this.$refs.worldwide.className = defaultClass + 'toggle-active'
         this.$refs.indonesia.className = defaultClass
