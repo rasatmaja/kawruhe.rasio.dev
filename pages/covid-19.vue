@@ -386,7 +386,7 @@
             matter --
           </h2>
           <button class="primary-button mt-5">
-            Call 119
+            <a href="tel:119">Call 119</a>
           </button>
           <img
             width="80"
