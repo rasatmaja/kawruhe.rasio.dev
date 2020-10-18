@@ -63,7 +63,9 @@
           </div>
           <div class="md:grid grid-cols-3">
             <div class="flex flex-col items-center p-5">
+              <CovidLoading v-if="isLoading" />
               <p
+                v-else
                 class="text-2xl sm:text-3xl font-semibold text-covid-blue-primary"
               >
                 {{ cases.confirmed }}
@@ -71,7 +73,9 @@
               <p>Confirmed cases</p>
             </div>
             <div class="flex flex-col items-center p-5">
+              <CovidLoading v-if="isLoading" />
               <p
+                v-else
                 class="text-2xl sm:text-3xl font-semibold text-covid-green-primary"
               >
                 {{ cases.recovered }}
@@ -79,7 +83,9 @@
               <p>Recovered cases</p>
             </div>
             <div class="flex flex-col items-center p-5">
+              <CovidLoading v-if="isLoading" />
               <p
+                v-else
                 class="text-2xl sm:text-3xl font-semibold text-covid-red-primary"
               >
                 {{ cases.deaths }}
@@ -413,6 +419,11 @@ export default {
     return {
       today: new Date().toLocaleDateString(),
       cases: {}
+    }
+  },
+  computed: {
+    isLoading () {
+      return this.$store.getters['covid/isLoading']
     }
   },
   mounted () {

@@ -1,5 +1,5 @@
 export const state = () => ({
-  isLoading: false,
+  isLoading: true,
   indonesiaCases: {
     confirmed: '0',
     recovered: '0',
@@ -61,5 +61,8 @@ export const getters = {
   },
   getWorldwideData: (state) => {
     return state.worldwideCases
+  },
+  isLoading: (state) => {
+    return state.isLoading
   }
 }
