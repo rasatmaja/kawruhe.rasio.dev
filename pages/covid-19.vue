@@ -1,46 +1,61 @@
 <template>
   <div id="covid" class="overflow-hidden">
     <header class="shadow-md fixed w-full z-50 blur-bg">
-      <nav class="flex mx-auto max-w-screen-xl px-10 py-5 justify-end">
-        <div id="menu-container" class="grid grid-flow-col gap-10">
-          <a href="#covid-update" class="hover:text-covid-red-primary">Update Cases</a>
-          <a href="#covid-about" class="hover:text-covid-red-primary">Covid-19</a>
-          <a href="#covid-symptoms" class="hover:text-covid-red-primary">Symptoms</a>
-          <a href="#covid-prevention" class="hover:text-covid-red-primary">Preventions</a>
+      <nav class="flex items-center justify-between flex-wrap mx-auto max-w-screen-xl px-5 lg:px-10 py-3">
+        <div id="logo-container" class="font-black text-covid-red-primary flex items-center">
+          <img src="~assets/img/covid/virus-color.svg" alt="Covid-19" width="32" class="mr-3">
+          COVID-19
+        </div>
+        <div class="block lg:hidden">
+          <button class="flex items-center px-3 py-2 border rounded border-gray-400" @click="toggleMenu()">
+            <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+          </button>
+        </div>
+        <div :class="isMenuCollapse ? 'block' : 'hidden'" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
+          <div class="text-sm lg:text-base lg:flex-grow max-w-xl lg:justify-end lg:text-right">
+            <a href="#covid-update" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Cases</a>
+            <a href="#covid-about" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Covid-19</a>
+            <a href="#covid-symptoms" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Symptoms</a>
+            <a href="#covid-prevention" class="block mt-4 lg:inline-block lg:mt-0 mr-8 hover:text-covid-red-primary">Preventions</a>
+            <a href="/" class="block mt-4 lg:inline-block lg:mt-0 hover:text-covid-red-primary">Home</a>
+          </div>
         </div>
       </nav>
     </header>
     <div class="main-container">
       <article
         id="covid-main"
-        class="md:flex flex-row-reverse items-center p-5 lg:p-10"
+        class="p-5 lg:p-10 mt-16 flex flex-col justify-center"
       >
-        <div v-scroll-observer:animation-right class="lg:w-1/2">
-          <img
-            src="~/assets/img/covid/main-bg.svg"
-            alt="disinfectant-illustrations"
-          >
-        </div>
-        <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
-          <div class="mx-auto lg:mx-px tittle-clip">
-            COVID-19 Alert
+        <div class="lg:flex items-center">
+          <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">
+            <div class="mx-auto lg:mx-px tittle-clip">
+              COVID-19 Alert
+            </div>
+            <h1 class="text-center lg:text-left">
+              Stay at Home
+            </h1>
+            <h1 class="text-center lg:text-left">
+              Stop it from Spreading
+            </h1>
+            <h2 class="text-center lg:text-left mb-5 max-w-md">
+              Coronavirus disease 2019 (COVID-19) is an infectious disease caused
+              by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+            </h2>
           </div>
-          <h1 class="text-center lg:text-left">
-            Stay at Home
-          </h1>
-          <h1 class="text-center lg:text-left">
-            Stop it from Spreading
-          </h1>
-          <h2 class="text-center lg:text-left">
-            Coronavirus disease 2019 (COVID-19) is an infectious disease caused
-            by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
-          </h2>
-          <button class="primary-button mx-auto lg:mx-px">
-            <a href="#covid-symptoms">Checks Symptoms</a>
-          </button>
+          <div v-scroll-observer:animation-right class="lg:w-1/2">
+            <img
+              src="~/assets/img/covid/main-bg.svg"
+              alt="disinfectant-illustrations"
+              class="mx-auto lg:-mb-16"
+            >
+          </div>
         </div>
+        <button v-scroll-observer:animation-left class="primary-button mx-auto lg:mx-px ">
+          <a href="#covid-symptoms">Checks Symptoms</a>
+        </button>
       </article>
-      <article id="covid-update" class="mt-10 mb-20 p-5 md:p-10">
+      <article id="covid-update" class="mb-20 p-5 md:p-10">
         <div
           v-scroll-observer:animation-up
           class="covid-update-container p-3 lg:p-8 relative"
@@ -48,14 +63,14 @@
           <div class="toggle">
             <button
               ref="worldwide"
-              class="toggle-active px-5 lg:px-10 py-1 rounded-md"
+              class="toggle-active px-5 lg:px-10 py-1 rounded-md text-sm md:text-base"
               @click="toggle(true)"
             >
               Worldwide
             </button>
             <button
               ref="indonesia"
-              class="px-5 lg:px-10 py-1 rounded-md"
+              class="px-5 lg:px-10 py-1 rounded-md text-sm md:text-base"
               @click="toggle(false)"
             >
               Indonesia
@@ -129,10 +144,10 @@
             Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is the
             strain of coronavirus that causes coronavirus disease 2019
             (COVID-19), the respiratory illness responsible for the COVID-19
-            pandemic. Colloquially known as simply the coronavirus, it was
-            previously referred to by its provisional name, 2019 novel
-            coronavirus (2019-nCoV), and has also been called human coronavirus
-            2019 (HCoV-19 or hCoV-19). Taxonomically, SARS-CoV-2 is a strain of
+            pandemic.
+          </h2>
+          <h2 class="text-center lg:text-left">
+            Taxonomically, SARS-CoV-2 is a strain of
             severe acute respiratory syndrome-related coronavirus (SARSr-CoV).
             The virus shows divttle genetic diversity, indicating that the
             spillover event introducing SARS-CoV-2 to humans is divkely to have
@@ -248,7 +263,7 @@
         <h1 class="text-center">
           How can we protect ourself from COVID-19
         </h1>
-        <h2 class="text-center">
+        <h2 class="text-center max-w-4xl">
           To protect yourself and others against COVID-19, clean your hands
           frequently and thoroughly. Use alcohol-based hand sanitizer or wash
           your hands with soap and water. If you use an alcohol-based hand
@@ -369,11 +384,13 @@
           </h1>
           <h2 class="text-center max-w-xl">
             If you need information or seek a medical help on Indonesia area,
-            contact this Indonesian COVID-19 Hotline on 119. -- Every live is
-            matter --
+            contact this Indonesian COVID-19 Hotline on 119.
           </h2>
-          <button class="primary-button">
-            <a href="">Call 119</a>
+          <h2 class="text-center max-w-xl font-bold">
+            Every live is matter
+          </h2>
+          <button class="primary-button mt-5">
+            <a href="tel:119">Call 119</a>
           </button>
           <img
             width="80"
@@ -418,7 +435,9 @@ export default {
   data () {
     return {
       today: new Date().toLocaleDateString(),
-      cases: {}
+      cases: {},
+
+      isMenuCollapse: false
     }
   },
   computed: {
@@ -434,7 +453,7 @@ export default {
   },
   methods: {
     toggle (isWorldwide = true) {
-      const defaultClass = 'px-10 py-1 rounded-md '
+      const defaultClass = 'px-5 lg:px-10 py-1 rounded-md text-sm md:text-base '
       if (isWorldwide) {
         this.$refs.worldwide.className = defaultClass + 'toggle-active'
         this.$refs.indonesia.className = defaultClass
@@ -446,6 +465,9 @@ export default {
 
         this.cases = this.$store.getters['covid/getIndonesiaData']
       }
+    },
+    toggleMenu () {
+      this.isMenuCollapse = !this.isMenuCollapse
     }
   },
   head () {
