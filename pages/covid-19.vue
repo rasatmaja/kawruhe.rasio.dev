@@ -55,10 +55,13 @@
           <a href="#covid-symptoms">Checks Symptoms</a>
         </button>
       </article>
-      <article id="covid-update" class="mb-20 p-5 md:p-10">
+      <article id="covid-update" class="mb-20 p-5 md:p-10 relative">
+        <CovidIconAbsolute :probs-top="'-50px'" :probs-left="'0'" :probs-size="'12em'" style="z-index: auto;" />
+        <CovidIconAbsolute :probs-bottom="'-180px'" :probs-right="'0'" :probs-size="'14em'" style="z-index: auto;" />
+        <CovidIconAbsolute :probs-bottom="'30px'" :probs-right="'0'" :probs-size="'6em'" style="z-index: auto;" />
         <div
           v-scroll-observer:animation-up
-          class="covid-update-container p-3 lg:p-8 relative"
+          class="covid-update-container p-3 lg:p-8 relative bg-white"
         >
           <div class="toggle">
             <button
@@ -115,12 +118,8 @@
               class="text-covid-red-primary"
             >kawalcorona.com</a></span>
           </div>
-          <img
-            width="80"
-            src="~/assets/img/covid/virus.svg"
-            alt="virus-illustrations"
-            class="absolute left-0 bottom-auto"
-          >
+          <CovidIconAbsolute :probs-bottom="'-40px'" :probs-left="'-40px'" :probs-size="'8em'" />
+          <CovidIconAbsolute :probs-top="'-40px'" :probs-right="'-40px'" :probs-size="'8em'" />
         </div>
       </article>
       <article id="covid-about" class="my-20 p-5 lg:p-10 lg:flex items-center">
@@ -158,7 +157,7 @@
       <div class="bg-covid-gray-tint">
         <article
           id="covid-symptoms"
-          class="my-20 p-5 lg:p-10 flex flex-col-reverse lg:flex-row items-center"
+          class="my-20 p-5 lg:p-10 flex flex-col-reverse lg:flex-row items-center relative"
         >
           <div v-scroll-observer:animation-left class="lg:w-1/2 lg:mr-20">
             <div class="mx-auto lg:mx-px tittle-clip">
@@ -245,6 +244,8 @@
             </h2>
           </div>
           <div v-scroll-observer:animation-right class="w-2/3 lg:w-1/2">
+            <CovidIconAbsolute :probs-top="'0'" :probs-right="'0'" :probs-size="'14em'" />
+            <CovidIconAbsolute :probs-top="'10em'" :probs-right="'-2em'" :probs-size="'5em'" />
             <img
               src="~/assets/img/covid/symptom-bg.svg"
               alt="disinfectant-illustrations"
@@ -255,8 +256,13 @@
       <article
         id="covid-prevention"
         v-scroll-observer:animation-up
-        class="mt-20 p-5 lg:p-10 flex flex-col items-center"
+        class="mt-20 p-5 lg:p-10 flex flex-col items-center relative"
       >
+        <CovidIconAbsolute :probs-bottom="'0'" :probs-left="'0'" :probs-size="'14em'" />
+        <CovidIconAbsolute :probs-top="'10em'" :probs-left="'-2em'" :probs-size="'5em'" />
+
+        <CovidIconAbsolute :probs-top="'25%'" :probs-right="'-5vh'" :probs-size="'14em'" />
+        <CovidIconAbsolute :probs-bottom="'10em'" :probs-right="'-2em'" :probs-size="'5em'" />
         <div class="tittle-clip">
           COVID-19 Prevention
         </div>
@@ -376,6 +382,7 @@
         v-scroll-observer:animation-up
         class="p-5 lg:p-10 -mb-40 relative z-10"
       >
+        <CovidIconAbsolute :probs-top="'-30px'" :probs-right="'2vh'" :probs-size="'14em'" />
         <div
           class="relative covid-contact-container flex flex-col items-center px-8 py-8 bg-white"
         >
@@ -392,12 +399,8 @@
           <button class="primary-button mt-5">
             <a href="tel:119">Call 119</a>
           </button>
-          <img
-            width="80"
-            src="~/assets/img/covid/virus.svg"
-            alt="virus-illustrations"
-            class="absolute bottom-0 left-0"
-          >
+          <CovidIconAbsolute :probs-bottom="'-30px'" :probs-left="'-40px'" :probs-size="'8em'" style="z-index: auto;" />
+          <CovidIconAbsolute :probs-bottom="'-30px'" :probs-right="'-40px'" :probs-size="'8em'" style="z-index: auto;" />
         </div>
       </article>
       <div
