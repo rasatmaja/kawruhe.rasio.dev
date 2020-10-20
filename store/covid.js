@@ -34,9 +34,9 @@ export const actions = {
   async fetchWorlwideCase ({ commit }) {
     commit('SET_LOADING_STATUS', true)
 
-    const confirmed = await this.$axios.get('/api/positif/')
-    const recovered = await this.$axios.get('/api/sembuh/')
-    const deaths = await this.$axios.get('/api/meninggal/')
+    const confirmed = await this.$axios.get('/api/covid/positif/')
+    const recovered = await this.$axios.get('/api/covid/sembuh/')
+    const deaths = await this.$axios.get('/api/covid/meninggal/')
 
     const data = {
       confirmed: confirmed.data.value,
@@ -49,7 +49,7 @@ export const actions = {
   },
   async fetchIndonesiaCase ({ commit }) {
     commit('SET_LOADING_STATUS', true)
-    const res = await this.$axios.get('/api/indonesia/')
+    const res = await this.$axios.get('/api/covid/indonesia/')
     commit('SET_INDONESIA_DATA', res)
     commit('SET_LOADING_STATUS', false)
   }
