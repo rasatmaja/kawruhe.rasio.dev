@@ -55,10 +55,10 @@ export default {
   },
 
   proxy: {
-    '/api/': {
+    '/api/covid/': {
       target: process.env.COVID_API_URL,
       pathRewrite: {
-        '^/api/': '/'
+        '^/api/covid/': '/'
       }
     }
   },
