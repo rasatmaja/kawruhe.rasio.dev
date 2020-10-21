@@ -30,23 +30,26 @@ export const mutations = {
 }
 
 export const actions = {
-
+  // Fetch data to get confirmed, recovered, and deaths worldwide cases
   async fetchWorlwideCase ({ commit }) {
     commit('SET_LOADING_STATUS', true)
 
-    const confirmed = await this.$axios.get('/api/covid/positif/')
-    const recovered = await this.$axios.get('/api/covid/sembuh/')
-    const deaths = await this.$axios.get('/api/covid/meninggal/')
+    const confirmed = this.$axios.get('/api/covid/positif/')
+    const recovered = this.$axios.get('/api/covid/sembuh/')
+    const deaths = this.$axios.get('/api/covid/meninggal/')
 
-    const data = {
-      confirmed: confirmed.data.value,
-      recovered: recovered.data.value,
-      deaths: deaths.data.value
-    }
-
-    commit('SET_WORLDWIDE_DATA', data)
-    commit('SET_LOADING_STATUS', false)
+    // create parrarel API request
+    await Promise.all([confirmed, recovered, deaths]).then((res) => {
+      const data = {
+        confirmed: res[0].data.value,
+        recovered: res[1].data.value,
+        deaths: res[2].data.value
+      }
+      commit('SET_WORLDWIDE_DATA', data)
+      commit('SET_LOADING_STATUS', false)
+    })
   },
+  // Fetch data to get confirmed, recovered, and deaths indonesia cases
   async fetchIndonesiaCase ({ commit }) {
     commit('SET_LOADING_STATUS', true)
     const res = await this.$axios.get('/api/covid/indonesia/')
