@@ -9,12 +9,13 @@ module.exports = {
     extend: {
       colors: {
         'covid-red-primary': '#EB4559',
+        'covid-red-primary-darker': '#D5152C',
         'covid-red-tint': '#FCECED',
         'covid-gray-primary': '#666666',
         'covid-gray-tint': '#FBFBFB',
         'covid-blue-primary': '#468CCC',
         'covid-blue-darken': '#151D41',
-        'covid-green-primary': '#46CC7C'
+        'covid-green-primary': '#38a363'
       }
     }
   },
