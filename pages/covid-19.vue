@@ -2,8 +2,8 @@
   <div id="covid" class="overflow-hidden">
     <header class="shadow-md fixed w-full z-50 blur-bg">
       <nav class="flex items-center justify-between flex-wrap mx-auto max-w-screen-xl px-5 lg:px-10 py-3">
-        <div id="logo-container" class="font-black text-covid-red-primary flex items-center">
-          <img src="~assets/img/covid/virus-color.svg" alt="Covid-19" width="32" class="mr-3">
+        <div id="logo-container" class="font-black text-covid-red-primary-darker flex items-center">
+          <img src="~assets/img/covid/virus-color.svg" width="32" height="32" alt="Covid-19" class="mr-3">
           COVID-19
         </div>
         <div class="block lg:hidden">
@@ -38,7 +38,7 @@
             <h1 class="text-center lg:text-left">
               Stop it from Spreading
             </h1>
-            <h2 class="text-center lg:text-left mb-5 max-w-md">
+            <h2 class="text-center lg:text-left mb-5 max-w-md mx-auto lg:mx-px">
               Coronavirus disease 2019 (COVID-19) is an infectious disease caused
               by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
             </h2>
@@ -48,6 +48,8 @@
               src="~/assets/img/covid/main-bg.svg"
               alt="disinfectant-illustrations"
               class="mx-auto lg:-mb-16"
+              height="100%"
+              width="100%"
             >
           </div>
         </div>
@@ -115,7 +117,7 @@
             Data update on {{ today }} and provided by
             <span><a
               href="https://kawalcorona.com"
-              class="text-covid-red-primary"
+              class="text-covid-red-primary-darker"
             >kawalcorona.com</a></span>
           </div>
           <CovidIconAbsolute :probs-bottom="'-40px'" :probs-left="'-40px'" :probs-size="'8em'" />
@@ -130,6 +132,8 @@
           <img
             src="~/assets/img/covid/about-bg.svg"
             alt="disinfectant-illustrations"
+            height="100%"
+            width="100%"
           >
         </div>
         <div v-scroll-observer:animation-right class="lg:w-2/3">
@@ -175,6 +179,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -184,6 +189,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -192,6 +198,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -200,6 +207,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -208,6 +216,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -216,6 +225,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -224,6 +234,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -232,6 +243,7 @@
               <div class="flex items-center my-1 text-sm lg:text-base">
                 <img
                   width="30"
+                  height="30"
                   src="~assets/icons/check.svg"
                   alt="check-icon"
                   class="mr-1"
@@ -248,7 +260,9 @@
             <CovidIconAbsolute :probs-top="'10em'" :probs-right="'-2em'" :probs-size="'5em'" />
             <img
               src="~/assets/img/covid/symptom-bg.svg"
-              alt="disinfectant-illustrations"
+              alt="Symptoms-illustrations"
+              height="100%"
+              width="100%"
             >
           </div>
         </article>
@@ -279,6 +293,7 @@
           <div class="prevention-items">
             <img
               width="60"
+              height="60"
               src="~assets/img/covid/wash-hand.svg"
               alt="wash illustrations"
               class="mr-2"
@@ -295,6 +310,7 @@
           <div class="prevention-items">
             <img
               width="60"
+              height="60"
               src="~assets/img/covid/masker.svg"
               alt="wash illustrations"
               class="mr-2"
@@ -311,6 +327,7 @@
           <div class="prevention-items">
             <img
               width="60"
+              height="60"
               src="~assets/img/covid/social-distancing.svg"
               alt="social distancing illustrations"
               class="mr-2"
@@ -328,6 +345,7 @@
           <div class="prevention-items">
             <img
               width="60"
+              height="60"
               src="~assets/img/covid/travel.svg"
               alt="travel illustrations"
               class="mr-2"
@@ -345,6 +363,7 @@
           <div class="prevention-items">
             <img
               width="60"
+              height="60"
               src="~assets/img/covid/quarantine.svg"
               alt="wash illustrations"
               class="mr-2"
@@ -362,6 +381,7 @@
           <div class="prevention-items">
             <img
               width="60"
+              height="60"
               src="~assets/img/covid/doctor.svg"
               alt="wash illustrations"
               class="mr-2"
@@ -410,16 +430,16 @@
         <div class="text-white text-center p-5 text-xs lg:text-sm">
           <div class="social-media-grid flex w-56 mx-auto justify-around mb-3">
             <a href="https://www.instagram.com/rasatmaja/">
-              <img src="~assets/icons/instagram.svg" alt="Instagram">
+              <img src="~assets/icons/instagram.svg" width="24" height="24" alt="Instagram">
             </a>
             <a href="https://twitter.com/rasatmaja">
-              <img src="~assets/icons/twitter.svg" alt="Twitter Icon">
+              <img src="~assets/icons/twitter.svg" width="24" height="24" alt="Twitter Icon">
             </a>
             <a href="https://github.com/rasatmaja">
-              <img src="~assets/icons/github.svg" alt="Github Icon">
+              <img src="~assets/icons/github.svg" width="24" height="24" alt="Github Icon">
             </a>
             <a href="mailto:contact@rasio.dev">
-              <img src="~assets/icons/email.svg" alt="Email Icon">
+              <img src="~assets/icons/email.svg" width="24" height="24" alt="Email Icon">
             </a>
           </div>
           Made with ❤️ by Rasio Atmaja. Powered by Vercel. Build with NuxtJS
