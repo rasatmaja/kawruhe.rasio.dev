@@ -509,6 +509,42 @@ export default {
           name: 'description',
           content:
             'Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)'
+        },
+        {
+          property: 'og:tittle',
+          content: 'Covid-19 basic information by kawruhe'
+        },
+        {
+          property: 'og:description',
+          content: 'Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)'
+        },
+        {
+          property: 'og:image',
+          content: 'https://kawruhe.rasio.dev/covid/meta-og-image.webp'
+        },
+        {
+          property: 'og:url',
+          content: 'https://kawruhe.rasio.dev/'
+        },
+        {
+          property: 'twitter:tittle',
+          content: 'Covid-19 basic information by kawruhe'
+        },
+        {
+          property: 'twitter:description',
+          content: 'Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)'
+        },
+        {
+          property: 'twitter:image',
+          content: 'https://kawruhe.rasio.dev/covid/meta-og-image.webp'
+        },
+        {
+          property: 'twitter:card',
+          content: 'summary_large_image'
+        },
+        {
+          property: 'twitter:site',
+          content: '@rasatmaja'
         }
       ]
     }
