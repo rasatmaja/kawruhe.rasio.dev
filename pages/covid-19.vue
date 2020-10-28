@@ -520,7 +520,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: 'https://kawruhe.rasio.dev/covid/meta-og-image.webp'
+          content: 'https://kawruhe.rasio.dev/covid/meta/meta-og-image.webp'
         },
         {
           property: 'og:url',
@@ -536,7 +536,7 @@ export default {
         },
         {
           name: 'twitter:image',
-          content: 'https://kawruhe.rasio.dev/covid/meta-og-image.webp'
+          content: 'https://kawruhe.rasio.dev/covid/meta/meta-og-image.webp'
         },
         {
           name: 'twitter:card',
