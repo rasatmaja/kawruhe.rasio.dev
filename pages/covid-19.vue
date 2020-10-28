@@ -520,30 +520,30 @@ export default {
         },
         {
           property: 'og:image',
-          content: 'https://kawruhe.rasio.dev/covid/meta-og-image.webp'
+          content: 'https://kawruhe.rasio.dev/covid/meta/meta-og-image.webp'
         },
         {
           property: 'og:url',
           content: 'https://kawruhe.rasio.dev/'
         },
         {
-          property: 'twitter:tittle',
+          name: 'twitter:tittle',
           content: 'Covid-19 basic information by kawruhe'
         },
         {
-          property: 'twitter:description',
+          name: 'twitter:description',
           content: 'Coronavirus disease 2019 (COVID-19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)'
         },
         {
-          property: 'twitter:image',
-          content: 'https://kawruhe.rasio.dev/covid/meta-og-image.webp'
+          name: 'twitter:image',
+          content: 'https://kawruhe.rasio.dev/covid/meta/meta-og-image.webp'
         },
         {
-          property: 'twitter:card',
+          name: 'twitter:card',
           content: 'summary_large_image'
         },
         {
-          property: 'twitter:site',
+          name: 'twitter:site',
           content: '@rasatmaja'
         }
       ]
