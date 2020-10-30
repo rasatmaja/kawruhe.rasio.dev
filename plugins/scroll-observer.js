@@ -29,7 +29,7 @@ const animatedScrollObserver = new IntersectionObserver(
         */
       if (entry.isIntersecting) {
         entry.target.classList.add('enter')
-        // animatedScrollObserver.unobserve(entry.target);
+        animatedScrollObserver.unobserve(entry.target)
       } else {
         entry.target.classList.remove('enter')
       }
