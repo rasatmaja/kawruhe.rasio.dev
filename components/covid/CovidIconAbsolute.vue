@@ -1,5 +1,12 @@
 <template>
-  <img class="absolute p-5 covid-icon-absolute" src="~assets/img/covid/virus.svg" alt="COVID-19 Virus" :style="styles">
+  <img
+    v-scroll-observer:animation-up
+    class="absolute p-5 covid-icon-absolute"
+    src="~assets/img/covid/virus.svg"
+    loading="lazy"
+    alt="COVID-19 Virus"
+    :style="styles"
+  >
 </template>
 
 <style>
