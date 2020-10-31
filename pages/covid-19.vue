@@ -50,6 +50,7 @@
               class="mx-auto lg:-mb-16"
               height="100%"
               width="100%"
+              loading="lazy"
             >
           </div>
         </div>
@@ -134,6 +135,7 @@
             alt="disinfectant-illustrations"
             height="100%"
             width="100%"
+            loading="lazy"
           >
         </div>
         <div v-scroll-observer:animation-right class="lg:w-2/3">
@@ -263,6 +265,7 @@
               alt="Symptoms-illustrations"
               height="100%"
               width="100%"
+              loading="lazy"
             >
           </div>
         </article>
@@ -290,13 +293,14 @@
           sanitizer, make sure you use and store it carefully.
         </h2>
         <div class="prevention-container grid-cols-1 lg:grid-cols-2">
-          <div class="prevention-items">
+          <div v-scroll-observer:animation-up class="prevention-items">
             <img
               width="60"
               height="60"
               src="~assets/img/covid/wash-hand.svg"
               alt="wash illustrations"
               class="mr-2"
+              loading="lazy"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
               <p
@@ -307,13 +311,14 @@
               Wash your hand using soap and running water
             </div>
           </div>
-          <div class="prevention-items">
+          <div v-scroll-observer:animation-up class="prevention-items">
             <img
               width="60"
               height="60"
               src="~assets/img/covid/masker.svg"
               alt="wash illustrations"
               class="mr-2"
+              loading="lazy"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
               <p
@@ -324,13 +329,14 @@
               Always use mask if you not in your home
             </div>
           </div>
-          <div class="prevention-items">
+          <div v-scroll-observer:animation-up class="prevention-items">
             <img
               width="60"
               height="60"
               src="~assets/img/covid/social-distancing.svg"
               alt="social distancing illustrations"
               class="mr-2"
+              loading="lazy"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
               <p
@@ -342,13 +348,14 @@
               others.
             </div>
           </div>
-          <div class="prevention-items">
+          <div v-scroll-observer:animation-up class="prevention-items">
             <img
               width="60"
               height="60"
               src="~assets/img/covid/travel.svg"
               alt="travel illustrations"
               class="mr-2"
+              loading="lazy"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
               <p
@@ -360,13 +367,14 @@
               contact with COVID-19
             </div>
           </div>
-          <div class="prevention-items">
+          <div v-scroll-observer:animation-up class="prevention-items">
             <img
               width="60"
               height="60"
               src="~assets/img/covid/quarantine.svg"
               alt="wash illustrations"
               class="mr-2"
+              loading="lazy"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
               <p
@@ -378,13 +386,14 @@
               person knows they are sick
             </div>
           </div>
-          <div class="prevention-items">
+          <div v-scroll-observer:animation-up class="prevention-items">
             <img
               width="60"
               height="60"
               src="~assets/img/covid/doctor.svg"
               alt="wash illustrations"
               class="mr-2"
+              loading="lazy"
             >
             <div class="text-sm lg:text-base text-center lg:text-left">
               <p
