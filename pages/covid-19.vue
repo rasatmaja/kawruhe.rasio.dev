@@ -25,7 +25,7 @@
     <div class="main-container">
       <article
         id="covid-main"
-        class="p-5 lg:p-10 mt-16 flex flex-col justify-center"
+        class="p-5 lg:p-10 mt-16 flex flex-col justify-center mb-8 lg:mb-0"
       >
         <div class="lg:flex items-center">
           <div v-scroll-observer:animation-left class="lg:w-1/2 flex flex-col">

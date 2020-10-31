@@ -23,7 +23,8 @@ h2{
 }
 
 #covid-main{
-    min-height: calc(100vh * 0.7);
+    min-height: 50vh;
+    width: 100%;
 }
 
 .toggle{
