@@ -51,7 +51,7 @@
               height="100%"
               width="100%"
               loading="lazy"
-            />
+            >
           </div>
         </div>
         <button v-scroll-observer:animation-left class="primary-button mx-auto lg:mx-px ">
