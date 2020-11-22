@@ -1,22 +1,43 @@
 # Kawruhe
-Website that contains insights on specific topics. This website is built with NuxtJS and is hosted on Vercel.com
+> ## ***kawruhe***
+> *noun*
+> javanese **/k-wru-he/**
+
+kawruhe meaning knowlage in javanese, kawruhe a word that reprisenting the state of knowing about or being familiar with something
+
+---
+
+Kawruhe is a web app that contains insights on specific topics. This website is built with NuxtJS and is hosted on vercel.com
+
+![](https://img.shields.io/badge/Version-1.0.0-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Build-Sucess-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/NPM-6.14.8-informational?style=flat&logo=npm&logoColor=white&color=C83837)
+![](https://img.shields.io/badge/NuxtJS-2.14.5-informational?style=flat&logo=nuxt-js&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/@nuxt/tailwindcss-3.0.2-informational?style=flat&logo=tailwind-css&logoColor=white&color=38B2AC)
+
+
+<video src="https://github.com/rasatmaja/kawruhe.rasio.dev/raw/main/assets/img/covid/cover.webm" width="100%" height="auto" autoplay preload><video>
 
 ---
 
 ## Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+
+* [NuxtJS](https://nuxtjs.org/) - The Intuitive Vue Framework
+* [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
+
+## Assets
+
+* [Story by freepik](https://stories.freepik.com/) - Awesome illustrations for your next project
+* [Corona Live Data by kawalconorna.com](https://kawalcorona.com/api/) - Coronavirus Global & Indonesia Live Data
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To run this project on your local system, you can follow these steps:
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+This application uses NPM as its package manager, make sure that your system has NPM installed, but if not you can install it with the following command
+
 * npm
 ```sh
 npm install npm@latest -g
@@ -24,25 +45,33 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/rasatmaja/kawruhe.rasio.dev.git
 ```
-3. Install NPM packages
+2. Install NPM packages
 ```sh
 npm install
 ```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+3. Create .env files on root directory
+```
+COVID_API_URL=https://api.kawalcorona.com
+```
+4. Run app on local environment
+```sh
+npm run dev
 ```
 
 ## What I Learn from this Project 
-This section should be explining what i laern and the problem i face when developing this project.
-1. Can't use mdule @nuxt/content on vercel, my guest is vercel dosen fully suppport and optimize with all nuxt module
+On my journey to building this project I learned a few things and I ran into some problems like:
+
+1. Implement NuxtJS on prouction mode
+2. Integrate tailwind with NuxtJS project
+3. Make entering animation when object on view port using `Srcroll Observer`
+4. Using proxy on axios
+5. Learn how to deploy NuxtJS App on [Vercel](https://vercel.com/)
+6. Can't use module @nuxt/content on vercel, my guest is vercel dosen fully suppport and optimize with all nuxt module
 
 ## License
->You can check out the full license [here](https://github.com/rasatmaja/kawruhe.rasio.dev/blob/main/LICENSE)
-
 This project is licensed under the terms of the **MIT** license.
+>You can check out the full license [here](https://github.com/rasatmaja/kawruhe.rasio.dev/blob/main/LICENSE)
