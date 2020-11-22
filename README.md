@@ -1,6 +1,7 @@
 # Kawruhe
-Website that contains insights on specific topics. This website is built with NuxtJS and is hosted on Vercel.com
+This is a web app that contains insights on specific topics. This website is built with NuxtJS and is hosted on Vercel.com
 
+<video src="https://github.com/rasatmaja/kawruhe.rasio.dev/raw/main/assets/img/covid/cover.webm" width="100%" height="auto" autoplay preload><video>
 ---
 
 ## Built With
