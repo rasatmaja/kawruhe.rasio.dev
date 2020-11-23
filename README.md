@@ -16,7 +16,7 @@ Kawruhe is a web app that contains insights on specific topics. This website is 
 ![](https://img.shields.io/badge/@nuxt/tailwindcss-3.0.2-informational?style=flat&logo=tailwind-css&logoColor=white&color=38B2AC)
 
 
-<video src="https://github.com/rasatmaja/kawruhe.rasio.dev/raw/main/assets/img/covid/cover.webm" width="100%" height="auto" autoplay preload><video>
+![kawruhe.rasio.dev](https://github.com/rasatmaja/kawruhe.rasio.dev/raw/main/assets/img/covid/cover.gif)
 
 ---
 
