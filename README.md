@@ -1,4 +1,15 @@
 # Kawruhe
+
+Kawruhe is a web app that contains insights on specific topics. This website is built with NuxtJS and hosted on vercel.com
+
+![](https://img.shields.io/badge/Version-1.0.0-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Build-Sucess-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/NPM-6.14.8-informational?style=flat&logo=npm&logoColor=white&color=C83837)
+![](https://img.shields.io/badge/NuxtJS-2.14.5-informational?style=flat&logo=nuxt-js&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/@nuxt/tailwindcss-3.0.2-informational?style=flat&logo=tailwind-css&logoColor=white&color=38B2AC)
+
+![kawruhe.rasio.dev](https://github.com/rasatmaja/kawruhe.rasio.dev/raw/main/assets/img/covid/cover.gif)
+
 > ## ***kawruhe***
 > *noun*
 > javanese **/k-wru-he/**
@@ -7,23 +18,11 @@ kawruhe meaning knowlage in javanese, kawruhe a word that reprisenting the state
 
 ---
 
-Kawruhe is a web app that contains insights on specific topics. This website is built with NuxtJS and is hosted on vercel.com
-
-![](https://img.shields.io/badge/Version-1.0.0-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Build-Sucess-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/NPM-6.14.8-informational?style=flat&logo=npm&logoColor=white&color=C83837)
-![](https://img.shields.io/badge/NuxtJS-2.14.5-informational?style=flat&logo=nuxt-js&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/@nuxt/tailwindcss-3.0.2-informational?style=flat&logo=tailwind-css&logoColor=white&color=38B2AC)
-
-
-![kawruhe.rasio.dev](https://github.com/rasatmaja/kawruhe.rasio.dev/raw/main/assets/img/covid/cover.gif)
-
----
-
 ## Built With
 
 * [NuxtJS](https://nuxtjs.org/) - The Intuitive Vue Framework
 * [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
+* [Vercel](https://vercel.com/dashboard) - Deploy web projects with the best frontend developer experience and highest end-user performance.
 
 ## Assets
 
