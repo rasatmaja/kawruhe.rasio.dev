@@ -8,7 +8,6 @@ Kawruhe is a web app that contains insights on specific topics. This website is 
 ![](https://img.shields.io/badge/NuxtJS-2.14.5-informational?style=flat&logo=nuxt-js&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/@nuxt/tailwindcss-3.0.2-informational?style=flat&logo=tailwind-css&logoColor=white&color=38B2AC)
 
-
 ![kawruhe.rasio.dev](https://github.com/rasatmaja/kawruhe.rasio.dev/raw/main/assets/img/covid/cover.gif)
 
 > ## ***kawruhe***
